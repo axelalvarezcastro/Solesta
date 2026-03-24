@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: solesta-trichter
+    runtime: static
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
