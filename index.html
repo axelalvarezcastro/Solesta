@@ -1228,5 +1228,25 @@ document.querySelectorAll('.ch-card').forEach(card => {
 // ── Init progress
 updateUI();
 </script>
+
+<!-- MOBILE REDIRECT OVERLAY -->
+<div id="mobile-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#111;z-index:99999;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center;font-family:'Poppins',sans-serif">
+  <div style="max-width:320px">
+    <div style="font-size:48px;margin-bottom:24px">💻</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#c59b3f;margin:0 0 16px;font-weight:600">Presentación optimizada para pantalla completa</h2>
+    <p style="color:#9a9080;font-size:15px;line-height:1.6;margin:0 0 32px">Este deck está diseñado para verse en computadora. Para la mejor experiencia, ábrelo en tu laptop o desktop.</p>
+    <a href="mailto:?subject=Solesta%20%C2%B7%20Plan%20Estrat%C3%A9gico&body=Abre%20este%20enlace%20en%20tu%20computadora%3A%20https%3A%2F%2Fsolesta.onrender.com" style="display:inline-block;background:#c59b3f;color:#111;padding:14px 28px;border-radius:4px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:0.5px">Enviarme el enlace por email</a>
+    <p style="color:#6a6560;font-size:12px;margin-top:24px">Solesta · Los Cabos<br>Presentación confidencial</p>
+  </div>
+</div>
+<script>
+(function(){
+  var isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+  if(isMobile){
+    document.getElementById('mobile-overlay').style.display='flex';
+    document.body.style.overflow='hidden';
+  }
+})();
+</script>
 </body>
 </html>
