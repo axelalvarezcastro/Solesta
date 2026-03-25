@@ -364,22 +364,23 @@ body::after{
 .slide-scroll::-webkit-scrollbar-thumb{background:var(--mgray);border-radius:2px}
 
 /* ── Roadmap phases ────────────────────────────────────────── */
-.phase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;flex:1}
+.phase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1}
 .phase{
-  background:var(--black3);border:1px solid;border-radius:2px;
+  background:var(--black3);border:1px solid;border-radius:3px;
   overflow:hidden;display:flex;flex-direction:column;
-  transition:transform 250ms;
+  transition:transform 250ms,box-shadow 250ms;
 }
-.phase:hover{transform:translateY(-3px)}
-.phase-header{padding:12px 14px 10px;display:flex;flex-direction:column;gap:2px}
-.phase-tag{font-size:11px;font-weight:700;letter-spacing:2px;opacity:.9}
-.phase-period{font-size:12px;font-weight:300;opacity:.7}
-.phase-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;padding:0 14px 8px}
-.phase-items{padding:0 14px 14px;flex:1}
+.phase:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.phase-header{padding:14px 16px 12px;display:flex;flex-direction:column;gap:3px}
+.phase-tag{font-size:12px;font-weight:700;letter-spacing:2px;opacity:.9}
+.phase-period{font-size:13px;font-weight:400;opacity:.7}
+.phase-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;padding:0 16px 6px}
+.phase-goal{font-size:12px;color:var(--gold2);font-style:italic;padding:0 16px 10px;border-bottom:1px solid rgba(197,155,63,.15)}
+.phase-items{padding:8px 16px 16px;flex:1}
 .phase-item{
-  font-size:12px;color:var(--offwh);padding:5px 0;
+  font-size:13px;color:var(--offwh);padding:6px 0;
   border-bottom:1px solid rgba(255,255,255,.05);
-  display:flex;gap:8px;align-items:flex-start;line-height:1.4;
+  display:flex;gap:8px;align-items:flex-start;line-height:1.45;
 }
 .phase-item::before{content:'·';color:inherit;flex-shrink:0;margin-top:1px}
 .phase-item:last-child{border-bottom:none}
@@ -820,6 +821,7 @@ body::after{
           <div class="phase-period" style="color:var(--black)">Fundamentos</div>
         </div>
         <div class="phase-name" style="color:var(--lgray)">FUNDAMENTOS</div>
+        <div class="phase-goal">Objetivo: toda la infraestructura lista para lanzar campañas.</div>
         <div class="phase-items">
           <div class="phase-item">Landing page dedicada + modelo financiero interactivo</div>
           <div class="phase-item">CRM configurado con pipeline y automatizaciones de seguimiento</div>
@@ -828,6 +830,7 @@ body::after{
           <div class="phase-item">Perfil LinkedIn empresa + director optimizado</div>
           <div class="phase-item">Deck de inversionista digital + kit de ventas</div>
           <div class="phase-item">Definición de audiencias y segmentación por ciudad</div>
+          <div class="phase-item">Producción primer video YouTube 4K en sitio</div>
         </div>
       </div>
       <div class="phase reveal" style="border-color:var(--gold)">
@@ -836,6 +839,7 @@ body::after{
           <div class="phase-period" style="color:var(--black)">Lanzamiento</div>
         </div>
         <div class="phase-name" style="color:var(--gold)">LANZAMIENTO</div>
+        <div class="phase-goal">Objetivo: primeros leads calificados + pipeline activo.</div>
         <div class="phase-items">
           <div class="phase-item">Publicación en Whitepaper.mx (artículo + newsletter + distribución)</div>
           <div class="phase-item">Activación Meta Ads + LinkedIn Ads + Google Search</div>
@@ -844,6 +848,7 @@ body::after{
           <div class="phase-item">Secuencia email nurturing activa (6–8 correos automatizados)</div>
           <div class="phase-item">Contenido orgánico LinkedIn: 3 publicaciones/semana</div>
           <div class="phase-item">Primera ronda de optimización GEO en motores IA</div>
+          <div class="phase-item">Lanzamiento canal YouTube: 2–3 videos publicados</div>
         </div>
       </div>
       <div class="phase reveal" style="border-color:var(--gold2)">
@@ -852,6 +857,7 @@ body::after{
           <div class="phase-period" style="color:var(--black)">Optimización</div>
         </div>
         <div class="phase-name" style="color:var(--gold2)">OPTIMIZACIÓN</div>
+        <div class="phase-goal">Objetivo: primeras visitas presenciales + primer cierre.</div>
         <div class="phase-items">
           <div class="phase-item">Escalar presupuesto en canales con mejor ROAS</div>
           <div class="phase-item">Segunda editorial: Alto Nivel o Forbes México</div>
@@ -868,6 +874,7 @@ body::after{
           <div class="phase-period" style="color:var(--black)">Cierre y año 2</div>
         </div>
         <div class="phase-name" style="color:var(--gold3)">CIERRE / AÑO 2</div>
+        <div class="phase-goal">Objetivo: 3–4 cierres + propuesta estrategia año 2.</div>
         <div class="phase-items">
           <div class="phase-item">Reactivación leads fríos con nueva oferta / urgencia</div>
           <div class="phase-item">Publicación testimonial de comprador real</div>
