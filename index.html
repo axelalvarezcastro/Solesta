@@ -212,12 +212,17 @@ body::after{
   background:var(--black3);border:1px solid rgba(197,155,63,.2);
   border-radius:2px;padding:16px 14px;display:flex;flex-direction:column;
   gap:6px;border-left:3px solid var(--gold);
-  transition:transform 250ms,border-color 250ms;
+  transition:transform 250ms,border-color 250ms,box-shadow 250ms;
+  cursor:pointer;position:relative;
 }
 .ch-card:hover{transform:translateY(-3px);border-color:rgba(197,155,63,.7)}
-.ch-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--gold3)}
-.ch-role{font-size:12px;color:var(--offwh);line-height:1.4;flex:1}
-.ch-budget{font-size:14px;font-weight:600;color:var(--gold);margin-top:auto}
+.ch-card.expanded{border-color:rgba(197,155,63,.6);box-shadow:0 0 20px rgba(197,155,63,.15)}
+.ch-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--gold3);display:flex;justify-content:space-between;align-items:center}
+.ch-name::after{content:'▸';font-size:12px;color:var(--lgray);transition:transform 250ms}
+.ch-card.expanded .ch-name::after{transform:rotate(90deg);color:var(--gold2)}
+.ch-role{font-size:13px;color:var(--offwh);line-height:1.5;flex:1;max-height:0;overflow:hidden;opacity:0;transition:max-height 400ms ease,opacity 300ms ease,margin 300ms ease;margin:0}
+.ch-card.expanded .ch-role{max-height:200px;opacity:1;margin-top:4px}
+.ch-budget{font-size:12px;font-weight:600;color:var(--gold);margin-top:auto}
 
 /* ── Differentiator rows ───────────────────────────────────── */
 .diff-row{
@@ -650,7 +655,7 @@ body::after{
     <div class="slide-header reveal">
       <div class="slide-tag">05 · Estrategia</div>
       <div class="slide-title">Estrategia de 8 canales</div>
-      <div class="slide-subtitle">Cada canal cumple un rol específico en el funnel — ninguno trabaja solo.</div>
+      <div class="slide-subtitle">Cada canal cumple un rol específico en el funnel — ninguno trabaja solo. <span style="color:var(--lgray);font-size:13px">Click en cada canal para ver detalle.</span></div>
       <div class="header-rule"></div>
     </div>
     <div class="ch-grid">
